@@ -1,12 +1,4 @@
 ---
-
-- name: prometheus postgres | install python3-dnf
-  become: true
-  ansible.builtin.dnf:
-    update_cache: true
-    name:
-      - python3-dnf
-    state: present
 # tasks file for prometheus-postgres
 
 - name: Ensure {{ prometheus_postgres_system_user }} users exists
